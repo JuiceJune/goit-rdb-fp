@@ -56,6 +56,26 @@
 
 > Результати завдань 4 і 5, що залежать від `CURRENT_DATE`, у notebook пораховано на **2026-11-07**; при запуску в інший день вони відповідно зміняться.
 
+## Скриншоти
+
+Запити та їхні результати з notebook (папка [`screenshots/`](screenshots/)):
+
+| Завдання | Скриншот | Що показано |
+|---|---|---|
+| 1 | [01_schema.png](screenshots/01_schema.png) | `CREATE SCHEMA pandemic`, `SET search_path`, `current_schema()` |
+| 1 | [02_create_table.png](screenshots/02_create_table.png) | `CREATE TABLE infectious_cases` |
+| 1 | [03_import.png](screenshots/03_import.png) | імпорт CSV через `COPY` — 10 521 рядок |
+| 1 | [04_overview.png](screenshots/04_overview.png) | огляд даних |
+| 2 | [05_entities.png](screenshots/05_entities.png) | таблиця `entities` (унікальні `entity, code`) |
+| 2 | [06_disease_cases.png](screenshots/06_disease_cases.png) | таблиця `disease_cases` з `entity_id` |
+| 2 | [07_normalization_check.png](screenshots/07_normalization_check.png) | перевірка нормалізації без втрат |
+| 3 | [08_rabies_top10.png](screenshots/08_rabies_top10.png) | `AVG` / `MIN` / `MAX` / `SUM` для `number_rabies`, топ-10 |
+| 4 | [09_years_diff.png](screenshots/09_years_diff.png) | дата 1 січня, поточна дата, різниця в роках |
+| 5 | [10_fn_years_since_1.png](screenshots/10_fn_years_since_1.png) | створення `fn_years_since`, приклад 1996 → 30 |
+| 5 | [10_fn_years_since_2.png](screenshots/10_fn_years_since_2.png) | використання `fn_years_since` і порівняння із завданням 4 |
+| 5 | [11_fn_avg_cases_1.png](screenshots/11_fn_avg_cases_1.png) | створення `fn_avg_cases_per_period` і перевірка (12, 0, NULL) |
+| 5 | [11_fn_avg_cases_2.png](screenshots/11_fn_avg_cases_2.png) | використання з дільниками 12 / 4 / 2 |
+
 ## Як запустити
 
 Потрібен Python 3.9–3.12 (`pgserver` 0.1.4 має wheels лише для цих версій).
